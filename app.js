@@ -10,7 +10,8 @@ app.get('/', (req, res) => {
 app.get('/square/',(req,res) => {
 	stringa = req.query.string;
 	risultato = square.string_square(stringa);
-	res.send(risultato);
+	jsonresponse = {"result":risultato};
+	res.json(jsonresponse);
 });
 
  
